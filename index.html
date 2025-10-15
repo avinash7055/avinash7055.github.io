@@ -37,6 +37,17 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span class="highlight">Avinash Kumar</span></h1>
@@ -77,9 +88,22 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <h3>Data Scientist</h3>
+                        <h4>22nd Century Software Solutions</h4>
+                        <p class="timeline-date">August 2025 - Present</p>
+                        <ul>
+                            <li>Passionate about building intelligent, automated systems powered by Generative AI, LLMs, and AI Agents.</li>
+                            <li>Specialize in RAG architectures, LangGraph workflows, and AI automation to turn complex data into smart, actionable insights.</li>
+                            <li>Developed and deployed AI solutions that enhance data-driven decision-making and operational efficiency.</li>
+                            <li>Collaborated on cross-functional teams to integrate AI technologies into business processes, resulting in improved productivity and innovation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <h3>Digital Specialist Engineer</h3>
                         <h4>INFOSYS</h4>
-                        <p class="timeline-date">February 2022 - Present</p>
+                        <p class="timeline-date">February 2022 - July 2025</p>
                         <ul>
                             <li>Developed a Retrieval-Augmented Generation (RAG) architecture, improving content generation and information retrieval accuracy by 35%.</li>
                             <li>Optimized dense retriever using similarity search algorithms, reducing response time by 40% and enhancing content relevance.</li>
@@ -401,6 +425,20 @@
                 <span class="modal-close">&times;</span>
                 <img class="modal-content" id="modal-img">
                 <div id="modal-caption"></div>
+                <div class="modal-controls">
+                    <button class="modal-control-btn" id="zoom-in-btn">
+                        <i class="fas fa-search-plus"></i> Zoom In
+                    </button>
+                    <button class="modal-control-btn" id="zoom-out-btn">
+                        <i class="fas fa-search-minus"></i> Zoom Out
+                    </button>
+                    <button class="modal-control-btn" id="fullscreen-btn">
+                        <i class="fas fa-expand"></i> Fullscreen
+                    </button>
+                    <button class="modal-control-btn" id="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -515,20 +553,21 @@
                         <p><a href="https://github.com/avinash7055" target="_blank">github.com/avinash7055</a></p>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="from_name" id="from_name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="from_email" id="from_email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" required></textarea>
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn primary-btn">Send Message</button>
+                    <div id="form-status" class="form-status"></div>
                 </form>
             </div>
         </div>
@@ -545,6 +584,8 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
